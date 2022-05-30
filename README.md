@@ -1,7 +1,7 @@
 # Remote-Repository
 //YMAL\\
 YAML is AINT markup language.
-**#YAML Hirarchy**
+#YAML Hirarchy
 Stages:
 - Stage: Build
   Jobs:
@@ -15,7 +15,7 @@ Stages:
   - Job: StartDeployment
     Steps:
     - Delpoypackage
-**# Stage** - Satge is collectiin of Jobs
+# Stage - Satge is collectiin of Jobs
 -Stage:
   Jobs:
   - Job: BuildonWindows
@@ -24,14 +24,14 @@ Stages:
   - Job: BuildonMAC
     Steps:
     - Build
-**# Job** - Job is collection of steps that runs on agent/envoronment
+# Job - Job is collection of steps that runs on agent/envoronment
 jobs:
 - Job: Buildpackage
   Steps:
   - Build
   - Package
   - Publish
-**#Steps** - Steps helps to define the set of process to set up your an activity/task which you want to perform on any specific job.
+#Steps - Steps helps to define the set of process to set up your an activity/task which you want to perform on any specific job.
 Steps:
 - Build
 - Package
