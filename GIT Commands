@@ -1,0 +1,49 @@
+git init
+#GIT CONFIG:
+git config --global user.name "jaandhan"
+git config --global user.email "jaandhan.info@gmail.com"
+git config --list
+git clone {Remote Repo URL}
+git remote add origin {Remote Repo URL}
+#GIT LOG:
+git log - This command prints the entire version history of the branch.
+git log --follow {file} - This command prints version history for a file, including the renaming of files.
+#GIT DIFF:
+git diff - This command compares all the file differences which are not yet staged.
+git diff –staged - This command compares the differences between all the files in the staging area and the latest version present.
+git diff {first branch} {second branch} - This command compares the differences between the two branches mentioned.
+git show {commit Id} - This command shows the metadata and content changes of the specified commit.
+git tag {tag name} - Tags are used to mark a commit stage as relevant. We can tag a commit for future reference. Primarily, it is used to mark a project’s initial point like v1.1.
+git add {file} - This command adds the specified file to the staging area.
+git add * - This command adds all files to the staging area.
+git rm file1.txt - This command removes the file from your working directory and stages the deletion.
+git commit -m “updating file2.txt” - This command records the file(s) in the version history.
+git commit -a -m “updating known files” - -a switch with the commit command to automatically “add” changes from all known files and to automatically “rm” files in the index that have been removed from the working tree, and then perform the actual commit.
+#GIT STASH:
+git stash push - This command temporarily stores all the modified tracked files.
+git stash list - This command lists all stashed changesets.
+git stash apply - This command restores the most recently stashed files.
+git stash apply stash@{2} - This command apply the mentioned stash.
+git stash drop - This command discards the most recently stashed changeset.
+git stash drop stash@{2} - This command discards mentioned stashed changeset.
+#GIT RESET:
+git reset {file} - This command unstages the file, but it preserves the file contents.
+git reset {commit} - This command undoes all the commits after the specified commit and preserves the changes locally.
+git reset --hard {commit} - This command discards all history and goes back to the specified commit.
+git revert {commit hash} - The command reverts the changes made in the mentioned commit and creates a new commit. It leaves the files in the same state as if the commit that has been reverted never existed. The log will preserve the commit.
+#GIT BRANCH:
+git branch - This command lists all the local branches in the current repository.
+git branch {branch name} - This command creates a new branch with the name provided.
+git branch -d {branch name} - This command deletes the specified branch.
+git checkout {branch name} - This command is used to switch from one branch to the specified branch.
+git checkout -b {branch name} - This command creates a new branch with the specified name and also switches to it.
+#GIT SYNCHRONIZE CHANGES COMMANDS:
+git merge {branch name} - This command merges the specified branch’s history into the current branch.
+git fetch - This command download commits, files, and refs from a remote repository into your local repo. Fetching is what you do when you want to see what everybody else has been working on.
+git pull https://github.com/iPraBhu/git-practice.git - This command fetches and merges changes on the remote server to your working directory.
+git pull origin {branch} - This command fetches and merges changes on the specified branch.
+git push origin {branch name} - This command sends the committed changes of the master branch to your remote repository.
+git push origin –all - This command pushes all branches to your remote repository.
+git push origin :{branch name} - This command deletes a branch from your remote repository.
+git push origin :test
+*origin is the remote repository alias.
